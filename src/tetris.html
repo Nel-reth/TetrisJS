@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="./tetris.css"></style>
 </head>
 <body onload="initialize();">
-    <div id="overlayContainer">
+    <div id="gameContainer">
+        <div id="overlayContainer">
         <canvas id="game" width="250" height="1000%">
             Seems like your browser doesn't support this game...
         </canvas>
@@ -22,6 +23,11 @@
             S: Soft drop<br>
             Q,E: Rotate left,right</p>
         </div>
+    </div>
+    <div id = "scoreboard">
+        <label for="score">Score: </label>
+        <input readonly type="text" id="score" value="0">
+    </div>
     </div>
 </body>
 </html>

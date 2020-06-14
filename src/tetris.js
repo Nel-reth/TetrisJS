@@ -4,6 +4,9 @@ let timerStates = {
     PAUSED:     2,
 };
 
+let level;
+let score;
+
 let gameTimer = {
     timer:          undefined,
     stepFrequency:  3,
@@ -49,6 +52,8 @@ function initialize() {
     }
     ctx = canvas.getContext('2d');
     
+    this.level = 0;
+    this.score = 0;
     playArea.initialize();
     playArea.currentTile = spawnRandomTile();
     playArea.addTile(playArea.currentTile);
@@ -249,7 +254,25 @@ function clearRows() {
         rows.forEach(rowNumber => {
             playArea.deleteRow(rowNumber);
         });
+        this.score += scoreRows(rows.length);
     }
+    document.getElementById("score").value = this.score;
+}
+
+function scoreRows(clearedRowsCount) {
+    let baseScore;
+    switch(clearedRowsCount){
+        case 1:     baseScore = 40;
+                    break;
+        case 2:     baseScore = 100;
+                    break;
+        case 3:     baseScore = 300;
+                    break;
+        case 4:     baseScore = 1200;
+                    break;
+        default:    return 0;
+    }
+    return baseScore * (this.level + 1);
 }
 
 function doesCollide(oldTile, newTile) {

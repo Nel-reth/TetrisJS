@@ -26,3 +26,11 @@
 overlayContainer canvas {
     position: fixed;
 }
+
+#gameContainer {
+    display: flex;
+}
+
+#scoreboard {
+    padding: 10px;
+}
