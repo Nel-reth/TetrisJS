@@ -1,0 +1,28 @@
+#overlayContainer {
+    position: relative;
+}
+
+#pausedOverlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Calibri";
+    font-size: 24px;
+    
+}
+
+#pausedOverlay p{
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+
+overlayContainer canvas {
+    position: fixed;
+}

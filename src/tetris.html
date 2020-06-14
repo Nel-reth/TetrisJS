@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_a_triangle -->
+    <!-- https://tetris.fandom.com/wiki/SRS -->
+    <meta charset="utf-8"/>
+    <title>Tetris</title>
+    <script type="text/javascript" src="./tetris.js"></script>
+    <link rel="stylesheet" type="text/css" href="./tetris.css"></style>
+</head>
+<body onload="initialize();">
+    <div id="overlayContainer">
+        <canvas id="game" width="250" height="1000%">
+            Seems like your browser doesn't support this game...
+        </canvas>
+        <div id="pausedOverlay">
+            <p>Game Paused<br>
+            - Press P to continue -<br>
+            <br>
+            Controls:<br>
+            A,D: Left,Right<br>
+            S: Soft drop<br>
+            Q,E: Rotate left,right</p>
+        </div>
+    </div>
+</body>
+</html>
